@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kclaudan <kclaudan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 14:38:39 by kclaudan          #+#    #+#             */
-/*   Updated: 2024/10/24 14:38:39 by kclaudan         ###   ########.fr       */
+/*   Created: 2024/10/24 15:45:25 by kclaudan          #+#    #+#             */
+/*   Updated: 2024/10/24 15:45:25 by kclaudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-int	len(char *str)
-{
-	int	i;
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
+# include <stdlib.h>
+# include <stdint.h>
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+int				ft_atoi(const char *str);
+int				ft_isalnum(int c);
+int				ft_isalpha(int c);
+int				ft_isascii(int c);
+int				ft_isdigit(int c);
+int				ft_isprint(int c);
+int				ft_strlen(char *str);
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-
-	i = 0;
-	if (size == 0)
-		return (len(src));
-	while (src[i] && i < size - 1)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (len(src));
-}
+#endif
