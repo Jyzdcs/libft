@@ -10,13 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_calloc(size_t elementCount, size_t elementSize)
 {
 	void			*tab;
-	unsigned char		*el;
-	size_t				i;
+	unsigned char	*el;
+	size_t			i;
 
 	if (elementCount * elementSize > SIZE_MAX)
 		return (NULL);
@@ -33,7 +32,7 @@ void	*ft_calloc(size_t elementCount, size_t elementSize)
 	}
 	return (tab);
 }
-
+/*
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -50,4 +49,4 @@ int	main(int ac, char **av)
 		i--;
 	}
 	free(tab);
-}
+}*/

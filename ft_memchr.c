@@ -13,14 +13,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char *v = s;
-	unsigned char 	uc;
+	const unsigned char	*v = s;
+	unsigned char		uc;
 
 	uc = c;
 	while (n)
 	{
 		if (*v == uc)
-			return (unsigned char *)(v);
+			return ((unsigned char *)v);
 		n--;
 		v++;
 	}
@@ -33,6 +33,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 ** int main() {
 ** 	const char str[] = "Hello, world!";
 ** 
-** 	printf("Le caractère 'w' a été trouvé à la position : %ld\n", (char*)ft_memchr(str, 'w', strlen(str)) - str);
+** 	printf("Le caractère 'w' a été trouvé à la position : %ld\n"
+, (char*)ft_memchr(str, 'w', strlen(str)) - str);
 ** }
 */

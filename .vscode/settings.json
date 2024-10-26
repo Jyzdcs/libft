@@ -3,6 +3,9 @@
 	"42header.email": "kclaudan@student.42.fr",
 	"files.associations": {
 		"string.h": "c",
-		"libft.h": "c"
+		"libft.h": "c",
+		"typeinfo": "c",
+		"stdlib.h": "c",
+		"stdio.h": "c"
 	}
 }
