@@ -1,18 +1,6 @@
 # Exclure le dossier .vscode
 .vscode/
 
-# Exclure le dossier .git
-.git/
-
 # Autres exclusions courantes (facultatives)
 # Fichiers de compilation
 *.out
-
-# Fichiers de logs
-*.log
-
-# Dossiers de dépendances (exemple pour Node.js)
-node_modules/
-
-# Fichiers de configuration spécifiques à l'environnement
-.env
