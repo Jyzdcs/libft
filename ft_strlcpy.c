@@ -21,7 +21,7 @@ int	len(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 
