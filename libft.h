@@ -38,5 +38,6 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 char	*ft_strnstr(const char *str, const char *sub, size_t len);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
