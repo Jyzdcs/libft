@@ -9,19 +9,26 @@
 /*   Updated: 2024/10/27 14:59:14 by kclaudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*
+Cette fonction extrait une sous-chaîne d'une chaîne donnée.
+Elle prend en compte une position de départ et une longueur spécifiées.
+Utile pour isoler une partie spécifique d'une chaîne de caractères.
+Elle alloue de la mémoire pour la nouvelle sous-chaîne et la retourne.
+Équivalent à une combinaison de malloc et strncpy de la bibliothèque standard C.
+*/
 
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*tab;
-	int		i;
+	size_t	i;
 
 	tab = malloc(sizeof(char) * len + 1);
 	if (tab == NULL)
 		return (NULL);
 	i = 0;
-	while (i < len  && s[start])
+	while (i < len && s[start])
 		tab[i++] = s[start++];
 	tab[i] = '\0';
 	return (tab);
