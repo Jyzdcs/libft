@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
+
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
@@ -21,6 +21,7 @@ void	ft_putchar_fd(char c, int fd)
 #include <string.h>
 #include <stdio.h>
 
+#include <fcntl.h>
 int	main(int ac, char **av)
 {
 	(void)ac;
