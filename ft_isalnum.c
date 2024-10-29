@@ -17,12 +17,12 @@ int	ft_isalnum(int c)
 		|| (c >= 'a' && c <= 'z')
 		|| (c >= '0' && '9' >= c));
 }
+
 /*
-** /*
-** #include <stdlib.h>
-** #include <string.h>
-** #include <stdio.h>
-** int	main(__attribute__((unused))int ac, char **av)
-** {
-** 	printf("%d", ft_isalnum(av[1][0]));
-** }*/
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+int	main(__attribute__((unused))int ac, char **av)
+{
+	printf("%d", ft_isalnum(av[1][0]));
+}*/

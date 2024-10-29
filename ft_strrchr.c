@@ -9,6 +9,12 @@
 /*   Updated: 2024/10/26 16:57:17 by kclaudan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*
+Cette fonction recherche la dernière occurrence d'un caractère dans une chaîne.
+Elle est utile pour trouver la position finale d'un caractère spécifique.
+Elle retourne un pointeur vers ce caractère ou NULL s'il n'est pas trouvé.
+C'est l'équivalent de strrchr de la bibliothèque standard C.
+*/
 
 #include "libft.h"
 

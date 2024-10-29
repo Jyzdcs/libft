@@ -4,3 +4,5 @@
 # Autres exclusions courantes (facultatives)
 # Fichiers de compilation
 *.out
+
+*.txt
