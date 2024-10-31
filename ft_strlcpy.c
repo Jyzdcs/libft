@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	len(char *str)
+static int	len(const char *str)
 {
 	int	i;
 
@@ -21,7 +21,7 @@ int	len(char *str)
 	return (i);
 }
 
-size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
 	unsigned int	i;
 

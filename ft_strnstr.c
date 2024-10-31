@@ -17,20 +17,24 @@ char	*ft_strnstr(const char *str, const char *sub, size_t len)
 	size_t	i;
 	int		j;
 
+	if ((!str || !sub) && len == 0)
+		return (NULL);
+	if (*sub == '\0')
+		return ((char *)str);
 	i = 0;
-	while (i < len)
+	while (i < len && (str[i] || sub[i]))
 	{
 		j = 0;
-		while (sub[j] == str[i])
+		while (i < len && sub[j] == str[i])
 		{
 			i++;
 			j++;
+			if (sub[j] == '\0')
+				return ((char *)(str + (i - j)));
 		}
-		if (sub[j] == '\0')
-			return ((char *)(str + (i - j)));
 		i++;
 	}
-	return ((char *)(str));
+	return (NULL);
 }
 /*
 #include <stdlib.h>
@@ -42,6 +46,10 @@ int	main(int ac, char **av)
 	(void)ac;
 	const char *s1 = "Bardock est semblable";
 	const char *s2 = "rdock es";
-	char *result = ft_strnstr(s1, s2, 9);
-	printf("%s", result);
-}*/
+	const char *str;
+	if (!(str = ft_strnstr(" ipsum dolor sit amet", "abcd", 9)))
+		printf("NULL");
+	else
+		printf(("%s\n"), str);
+}
+*/

@@ -13,16 +13,16 @@
 
 int	ft_isprint(int c)
 {
-	return (32 < c && c <= 127);
+	return (32 <= c && c < 127);
 }
 /*
-** #include <stdlib.h>
-** #include <string.h>
-** #include <stdio.h>
-** 
-** int	main(int ac, char **av)
-** {
-** 	(void)ac;
-** 	printf("%d\n", ft_isprint(av[1][0]));
-** }
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+int	main(int ac, char **av)
+{
+	(void)ac;
+	printf("%d\n", ft_isprint(av[1][0]));
+}
 */

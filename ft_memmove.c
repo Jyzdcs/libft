@@ -17,25 +17,35 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const unsigned char	*src_el;
 	unsigned char		*dest_el;
 
-	src_el = src + n;
-	dest_el = dest + n;
-	while (n)
+	if (!dest && !src)
+		return (NULL);
+	if (dest < src)
 	{
-		*--dest_el = *--src_el;
-		n--;
+		src_el = src;
+		dest_el = dest;
+		while (n--)
+			*dest_el++ = *src_el++;
+	}
+	else
+	{
+		src_el = src + n;
+		dest_el = dest + n;
+		while (n--)
+			*--dest_el = *--src_el;
 	}
 	return (dest);
 }
 /*
 #include <string.h>
 int main() {
-    char str[50] = "123456789";
+    char str[50] = "123456789bewyir";
     char buffer[50];
     
     printf("Résultat avant memmove: %s\n", str);
     // Copie avec chevauchement: source et destination se chevauchent
-    memmove(str + 4, str + 2, 4);
+    memmove(str + 5, str, 9);
 
     printf("Résultat après memmove: %s\n", str);
     return 0;
-}*/
+}
+*/

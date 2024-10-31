@@ -17,6 +17,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	unsigned int	len_src;
 	unsigned int	len_dst;
 
+	if (!dest && size == 0)
+		return (0);
 	i = 0;
 	len_src = ft_strlen(src);
 	len_dst = ft_strlen((const char *)dest);
@@ -30,12 +32,12 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[i + len_dst] = '\0';
 	return (len_dst + len_src);
 }
-/*#include <stdio.h>
-#include <bsd/string.h>
+/*
+#include <stdio.h>
 int     main(void)
 {
-        char dest[8] = "Lucas";
-        char src[5] = "Malik";
-        printf("%u\n", ft_strlcat(dest, src,  4));
-        printf("%zu\n", strlcat(dest, src,  4));
-}*/
+        char dest[18] = "Lucas";
+        char src[20] = " kylian goat";
+        printf("%lu\n%s", ft_strlcat(dest, src, 0), dest);
+}
+*/

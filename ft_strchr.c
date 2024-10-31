@@ -13,12 +13,14 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (s != NULL)
+	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char)c)
 			return ((char *)(s));
 		s++;
 	}
+	if ((unsigned char)c == *s)
+		return ((char *)(s));
 	return (NULL);
 }
 /*
@@ -30,6 +32,7 @@ int	main(int ac, char **av)
 {
 	(void)ac;
 	const char *s = "SALUT BARDOCK";
-	char *w = ft_strchr(s, 'B');
+	char *w = ft_strchr(s, av[1][0]);
 	printf("%s\n", w);
-}*/
+}
+*/

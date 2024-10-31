@@ -24,13 +24,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*tab;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
+	if (start >= len)
+		return (ft_strdup(""));
 	tab = malloc(sizeof(char) * len + 1);
 	if (tab == NULL)
 		return (NULL);
 	i = 0;
-	while (i < len && s[start])
+	while (i < len)
 		tab[i++] = s[start++];
-	tab[i] = '\0';
+	tab[len] = '\0';
 	return (tab);
 }
 /*
@@ -41,7 +45,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int	main(int ac, char **av)
 {
 	(void)ac;
-	char *str = "BONJOUR TLMD JE SUIS BARDOCK !";
-	char *sb = ft_substr(str, 13, 20);
+	char *sb = ft_substr(av[1], (unsigned int)atoi(av[2]), 5);
 	printf("%s\n", sb);
-}*/
+}
+*/

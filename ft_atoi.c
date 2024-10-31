@@ -20,12 +20,13 @@ int	ft_atoi(const char *str)
 	i = 0;
 	nbr = 0;
 	sign = 0;
-	while (str[i] <= 32)
+	while ((9 <= str[i] && str[i] <= 13) || str[i] == ' ')
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '+' || str[i] == '-')
 	{
+		if (str[i] == '-')
+			sign = -1;
 		i++;
-		sign = -1;
 	}
 	while ('0' <= str[i] && str[i] <= '9')
 	{
@@ -40,6 +41,7 @@ int	ft_atoi(const char *str)
 #include <stdio.h>
 int	main(int argc, char *argv[])
 {
-	int nbr = ft_atoi(argv[1]);
+	int nbr = ft_atoi("\n \n -21");
 	printf("%d\n", nbr);
-}*/
+}
+*/

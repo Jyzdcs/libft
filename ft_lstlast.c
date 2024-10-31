@@ -14,12 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*tmp;
-
-	tmp = lst;
-	while (tmp->next != NULL)
-		tmp = tmp->next;
-	return (tmp);
+	if (lst == NULL || lst->next == NULL)
+		return (lst);
+	return (ft_lstlast(lst->next));
 }
 /*
 #include <stdlib.h>

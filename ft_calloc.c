@@ -14,22 +14,13 @@
 void	*ft_calloc(size_t elementCount, size_t elementSize)
 {
 	void			*tab;
-	unsigned char	*el;
-	size_t			i;
 
 	if (elementCount * elementSize > SIZE_MAX)
 		return (NULL);
-	tab = malloc(sizeof(elementSize) * elementCount);
+	tab = malloc(elementSize * elementCount);
 	if (tab == NULL)
 		return (NULL);
-	el = tab;
-	i = 0;
-	while (i < elementCount * elementSize)
-	{
-		*el = 0;
-		el++;
-		elementCount--;
-	}
+	ft_bzero(tab, elementCount * elementSize);
 	return (tab);
 }
 /*
@@ -42,11 +33,14 @@ int	main(int ac, char **av)
 	(void)ac;
 	(void)av;
 	int i = 9;
+	int j = 0;
 	int *tab = (int *)ft_calloc(i, 8);
 	while (i)
 	{
-		printf("%d", tab[i]);
+		printf("%d", tab[j]);
+		j++;
 		i--;
 	}
+	printf("\n%d", j);
 	free(tab);
 }*/
