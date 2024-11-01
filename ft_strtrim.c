@@ -51,8 +51,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 		start++;
 	while (is_set(s1[end], set) && end >= start)
 		end--;
-	if (end == start)
-		return (ft_strdup(""));
 	len = end - start + 1;
 	tab = malloc(sizeof(char) * (len + 1));
 	if (tab == NULL)
@@ -69,11 +67,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 int	main(int ac, char **av)
 {
 	(void)ac;
-	char const *s1 = "dawdfa";
-	char const *set = "  ";
-	//int	len = ft_len(av[1], av[2]);
 	char *filt = ft_strtrim(av[1], av[2]);
-	//printf("%d\n", len);
-	printf("filt : %sO\n", filt);
+	printf("filt : %s\n", filt);
 }
 */

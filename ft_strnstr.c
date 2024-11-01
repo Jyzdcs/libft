@@ -22,15 +22,14 @@ char	*ft_strnstr(const char *str, const char *sub, size_t len)
 	if (*sub == '\0')
 		return ((char *)str);
 	i = 0;
-	while (i < len && (str[i] || sub[i]))
+	while (i < len && str[i])
 	{
 		j = 0;
-		while (i < len && sub[j] == str[i])
+		while (i + j < len && sub[j] == str[i + j])
 		{
-			i++;
 			j++;
 			if (sub[j] == '\0')
-				return ((char *)(str + (i - j)));
+				return ((char *)(str + (i)));
 		}
 		i++;
 	}
@@ -47,7 +46,7 @@ int	main(int ac, char **av)
 	const char *s1 = "Bardock est semblable";
 	const char *s2 = "rdock es";
 	const char *str;
-	if (!(str = ft_strnstr(" ipsum dolor sit amet", "abcd", 9)))
+	if (!(str = ft_strnstr(av[1], av[2], atoi(av[3]))))
 		printf("NULL");
 	else
 		printf(("%s\n"), str);

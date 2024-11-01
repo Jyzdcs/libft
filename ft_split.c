@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 		{
 			tab[k] = alloc_word_memory(&s[i], c);
 			k++;
-			while (s[i] != c)
+			while (s[i] != c && s[i])
 				i++;
 		}
 	}
@@ -84,8 +84,7 @@ char	**ft_split(char const *s, char c)
 int	main(int ac, char **av)
 {
 	(void)ac;
-	(void)av;
-	char **tab = ft_split("salut tlmd ca va ?", ' ');
+	char **tab = ft_split("hello!", ' ');
 	int i = 0;
 	while (tab[i] != NULL)
 	{
