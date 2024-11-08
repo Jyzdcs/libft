@@ -22,7 +22,7 @@ Ce dépôt contient tous les fichiers du projet __libft__ dans le __cursus princ
 
 ## À propos
 
-Ce projet est une __bibliothèque C__ de fonctions utiles qui peuvent être utilisées dans les projets futurs du __cursus de l'école 42__. Avec l'accès à cette bibliothèque, le processus de codage dans les projets à venir sera plus efficace. L'objectif de réécrire ces fonctions est de mieux les comprendre et d'acquérir une large gamme d'outils pour les prochains projets. [Tu peux trouver plus d'informations dans le sujet ici](https://github.com/Jyzdcs/libft/blob/main/libft_subject.pdf). Comme indiqué dans le sujet, tous les fichiers se trouvent dans le même dossier.
+Ce projet est une __bibliothèque C__ de fonctions utiles qui peuvent être utilisées dans les projets futurs du __cursus de l'école 42__. Avec l'accès à cette bibliothèque, le processus de codage dans les projets à venir sera plus efficace. L'objectif de réécrire ces fonctions est de mieux les comprendre et d'acquérir une large gamme d'outils pour les prochains projets. [Tu peux trouver plus d'informations dans le sujet ici](https://github.com/Jyzdcs/libft/blob/main/fr_subject.fr). Comme indiqué dans le sujet, tous les fichiers se trouvent dans le même dossier.
 
 Le code dans ce dépôt suit [les règles de la Norminette](https://github.com/Jyzdcs/libft/blob/main/norme.es.pdf).
 
