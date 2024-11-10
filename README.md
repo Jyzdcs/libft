@@ -4,7 +4,7 @@
 
 <h1 align="center">libft</h1>
 
-> Projet du cursus de l'école 42 Málaga
+> Projet du cursus de l'école 42 Paris
 
 Ce dépôt contient tous les fichiers du projet __libft__ dans le __cursus principal de l'école 42 Paris__. C'est une bibliothèque personnalisée de fonctions utiles en __langage C__. Le dépôt inclut le `Makefile` et la bibliothèque `libft.h`.
 
