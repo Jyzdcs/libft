@@ -9,8 +9,9 @@ SRC = ./ft_atoi.c ./ft_bzero.c ./ft_calloc.c ./ft_isalnum.c ./ft_isalpha.c ./ft_
 		./ft_strjoin.c ./ft_strtrim.c ./ft_split.c  ./ft_putchar_fd.c ./ft_putendl_fd.c \
 		./ft_putstr_fd.c ./ft_putnbr_fd.c ./ft_itoa.c ./ft_strmapi.c ./ft_striteri.c
 
-BONUS = ./ft_lstnew.c ./ft_lstadd_front.c ./ft_lstsize.c ./ft_lstlast.c ./ft_lstadd_back.c \
-		./ft_lstdelone.c ./ft_lstclear.c ./ft_lstiter.c ./ft_lstmap.c
+BONUS = ./ft_lstnew_bonus.c ./ft_lstadd_front_bonus.c ./ft_lstsize_bonus.c ./ft_lstlast_bonus.c \
+ 		./ft_lstadd_back_bonus.c ./ft_lstdelone_bonus.c ./ft_lstclear_bonus.c ./ft_lstiter_bonus.c \
+		./ft_lstmap_bonus.c
 
 NAME = libft.a
 
@@ -25,26 +26,20 @@ BONUS_OBJ = $(BONUS:.c=.o)
 $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
-# So est la cible que je defini, elle depend de obj.
-# La commande donner creer une bibliotheque partager.
-so: $(OBJ)
-	$(CC) -nostartfiles -shared -o libft.so $(OBJ)
-
 all: $(NAME)
 
-# Insturction pour re compiler un fichier non mis a jour
-%.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@
+# Insturction pour re compiler un fichier non mis a jour,
+# Cest une regle implicite par defaut personnaliser
+.c.o:
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-bonus: $(OBJ) $(BONUS_OBJ)
+bonus: $(BONUS_OBJ)
 	$(AR) $(NAME) $(BONUS_OBJ)
 
 clean: 
 	rm -rf $(OBJ) $(BONUS:.c=.o)
 
 fclean: clean
-	rm -rf $(NAME) libft.so
+	rm -rf $(NAME)
 
 re: fclean all
-
-.PHONY: clean fclean re bonus
