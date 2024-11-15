@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kclaudan <kclaudan@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/15 10:25:19 by kclaudan          #+#    #+#              #
+#    Updated: 2024/11/15 10:25:19 by kclaudan         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = cc
 
 FLAGS = -Wall -Wextra -Werror
@@ -18,7 +30,7 @@ NAME = libft.a
 AR = ar -rcs
 
 # Transforme chaques fichiers .c en .o
-OBJ = $(SRC:.c=.o) $(BONUS:.c=.o)
+OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
 
 # Name est la cible que je defini.
@@ -33,7 +45,7 @@ all: $(NAME)
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-bonus: $(BONUS_OBJ)
+bonus: $(BONUS_OBJ) $(NAME)
 	$(AR) $(NAME) $(BONUS_OBJ)
 
 clean: 

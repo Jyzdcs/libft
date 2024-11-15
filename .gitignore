@@ -1,5 +1,5 @@
 # Exclure le dossier .vscode
-.vscode/
+.vscode
 
 # Autres exclusions courantes (facultatives)
 # Fichiers de compilation
