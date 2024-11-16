@@ -30,7 +30,7 @@ int	count_words(char const *s, char sep)
 	return (counter);
 }
 
-char	*alloc_word_memory(char const *s, char sep)
+char	*malloc_word_memory(char const *s, char sep)
 {
 	int		i;
 	int		len;
@@ -47,6 +47,12 @@ char	*alloc_word_memory(char const *s, char sep)
 		tab[i] = s[i];
 	tab[i] = '\0';
 	return (tab);
+}
+
+void	verify_malloc(char *tab)
+{
+	if (tab == NULL)
+		free(tab);
 }
 
 char	**ft_split(char const *s, char c)
@@ -67,7 +73,8 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i] != c && s[i])
 		{
-			tab[k] = alloc_word_memory(&s[i], c);
+			tab[k] = malloc_word_memory(&s[i], c);
+			verify_malloc(tab[k]);
 			k++;
 			while (s[i] != c && s[i])
 				i++;

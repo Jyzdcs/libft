@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kclaudan <kclaudan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/15 10:25:19 by kclaudan          #+#    #+#              #
-#    Updated: 2024/11/15 10:25:19 by kclaudan         ###   ########.fr        #
+#    Created: 2024/11/14 15:02:50 by kclaudan          #+#    #+#              #
+#    Updated: 2024/11/14 15:02:50 by kclaudan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ all: $(NAME)
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-bonus: $(BONUS_OBJ) $(NAME)
+bonus: $(NAME) $(BONUS_OBJ)
 	$(AR) $(NAME) $(BONUS_OBJ)
 
 clean: 
